@@ -1,0 +1,43 @@
+@charset utf-8;
+
+section{
+    background-color: #ffebf0;
+    width: 600px;
+    margin: 0 auto;
+    padding: 2em; /* 16×2=32 */    
+}
+
+h1{
+    /*上0、左右0、下1 */
+    margin: 0 0 1; 
+    
+}
+img{
+    width:320px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+p{
+    line-height: 1.8;
+    background-color: yellow;
+}
+img{
+    float:right;
+    opacity: 0.5;
+ }
+div{
+   clear: right;
+}
+/* 疑似要素 */
+section::after{
+    content:"";
+    display: block; /*疑似要素はinline性質なのでblockに変更*/
+    clear: both; /*float:left/rightどちらも解除可能。clearはブロックレベル性質のみに適用可*/
+}
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+

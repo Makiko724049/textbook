@@ -16,4 +16,23 @@ ul li::before{
     vertical-align: middle;
 }
 
+ol{
+    border: 10px solid #ffc43d;
+    padding: 20px 40px;
+}
+
+ol li{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: url("../img/arrow.png") left bottom no-repeat;
+}
+
+ol li:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: transparent;
+}
+
+
+
 

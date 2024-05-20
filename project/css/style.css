@@ -1,0 +1,173 @@
+@charset 'utf-8';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+.container {
+    width: 680px;
+    background: #fff;
+    margin: 40px auto;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 150%;
+    padding: 1em;
+    margin: 0;
+}
+
+nav {
+    background: #efefef;
+}
+
+
+.gnav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.gnav-list li {
+    display: inline-block;
+    font-size: 80%;
+    margin: 0 0.5em;
+}
+
+
+.gnav-list li a {
+    display: block;
+    text-decoration: none;
+    color: #888;
+    padding: 0.5em 1em;
+}
+
+
+.gnav-list li a:hover {
+    background: #ccc;
+    color: #000;
+}
+
+
+.gnav-list li a::first-line {
+    font-weight: bold;
+}
+
+
+
+main {
+    padding: 2em 2em 0;
+}
+
+.about {
+    margin-bottom: 40px;
+
+}
+
+.about {
+    display: flex;
+}
+
+.about img {
+    width: 300px;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+    float: left;
+}
+
+.about p {
+    margin: 0;
+    height: 1px;
+}
+
+.about img::before {
+    contain: " ";
+    display: block;
+    clear: both;
+}
+
+
+.guide {
+    margin-bottom: 40px;
+}
+
+.guide-list {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.guide-list:last-of-type {
+    border-bottom: 0;
+}
+
+.guide-list a {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.guide-list a:hover {
+    opacity: 0.7
+}
+
+.guide-icon {
+    flex-basis: 25%;
+}
+
+.guide-icon img {
+    width: 100%;
+}
+
+.guide-text {
+    flex-basis: 70%;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em o;
+}
+
+footer small {
+    font-size: 0.75%;
+    color: #888;
+}
+
+
+@media screen and (max-width:700) {
+    .container {
+        width: 340;
+    }
+}
+
+h1 {
+    font-size: 1.1%;
+}
+
+.gnav-list li {
+    margin: 0;
+}
+
+.about img {
+    float: none;
+    max-width: 100%;
+}
+
+.guide-text h3 {
+    font-size: 1.1%;
+    margin: 0 0 0.5em;
+}

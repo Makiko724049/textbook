@@ -1,0 +1,228 @@
+// レイアウトスタイル
+// @use './mixins';      // mixins.ミックイン名
+// @use './mixins' as m; // m.ミックスイン名
+@use './mixins' as *; // ミックスイン名
+
+// コンテンツを格納するスタイル
+.inner {
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @include mq {
+        max-width: 1200px;
+    }
+}
+
+// モバイルとPCでの表示に関するスタイル
+.sp-only {
+    display: block;
+}
+
+.pc-only {
+    display: none;
+}
+
+@include mq {
+    .sp-only {
+        display: none;
+    }
+
+    .pc-only {
+        display: block;
+    }
+}
+
+
+// ヘッダー
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, .9);
+    z-index: 200;
+
+    // ロゴとナビゲーションをまとめるブロック
+    &-logo-menu {
+        display: flex;
+        // flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+// ロゴ共通
+.logo-area {
+    width: 200px;
+    margin: 0;
+    // text-align: left;
+    text-align: start;
+
+    @include mq {
+        width: 250px;
+    }
+
+}
+
+// ナビゲーション
+.gnav-toggle {
+    position: relative;
+    margin-top: 12px;
+}
+
+
+//チェックボックス
+.gnav-hidden {
+    display: none;
+}
+
+// １個目のlabelタグ（ボタン）
+#gnav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+#gnav-open {
+    cursor: pointer;
+
+    span,
+    span::before,
+    span::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #555;
+        display: block;
+        // cursor: pointer;
+    }
+
+    span::before {
+        bottom: -8px;
+    }
+
+    span::after {
+        bottom: -16px;
+    }
+}
+
+#gnav-close {
+    // display: none;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    translate: -100% 0;
+    transition:
+        opacity 1s ease-in-out,
+        translate 0s 1s ease-in-out; //帰り
+
+    #gnav-input:checked~& {
+        display: block;
+        opacity: .5;
+        translate: 0 0;
+        transition: opacity 1s ease-in-out; //行き
+    }
+}
+
+// #gnav-input:checked ~ #gnav-close {}
+
+#gnav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: .3s ease-in-out;
+    transform: translateX(-105%);
+    // translate: -105% 0;
+
+    #gnav-input:checked~& {
+        transform: translateX(0);
+        box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+    }
+}
+
+.gnav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+.gnav-item {
+    border-bottom: 2px dotted #eee;
+    margin: 10px;
+    padding-bottom: 20px;
+
+    a {
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        width: 200px;
+        text-align: center;
+
+        &::first-line {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+@include mq {
+
+    .gnav-menu {
+        flex-direction: row;
+        padding-top: 15px;
+        margin: 0;
+    }
+
+    .gnav-item {
+        border-bottom: none;
+        margin: 0;
+        padding-bottom: 0;
+
+        a {
+            color: #333;
+            width: 120px;
+
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+
+    }
+
+}
+
+// ページトップへ戻る
+.pagetop {
+    text-align: end; // rightとほぼ同義
+    padding: 15px;
+    background-color: var(--bg-gray);
+
+    a::after {
+        content: '';
+        background: url(../img/list-marker.svg) no-repeat;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 3px 10px;
+        transform: rotate(-90deg);
+    }
+}

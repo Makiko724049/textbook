@@ -1,0 +1,19 @@
+.move {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    padding: 30px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.square {
+    width: 100px;
+    height: 500px;
+    margin: 50px;
+    background-color: yellow
+}
+
+.move {
+    position: relative;
+}

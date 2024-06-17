@@ -1,3 +1,11 @@
 {
-    "svg.preview.background": "white"
+    "svg.preview.background": "white",
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../css",
+            "savePathReplacementPairs": null
+        }
+    ]
 }

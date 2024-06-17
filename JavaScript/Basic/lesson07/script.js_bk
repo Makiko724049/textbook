@@ -1,0 +1,38 @@
+const answers = ['B', 'B', 'A', 'B', 'B'];
+const form = document.querySelector('.quiz-form');
+const scorePoint = 100 / answers.length;
+let score = 0;
+
+form.addEventListener('submit', e => {
+    // デフォルトイベント(送信)の阻止
+    e.preventDefault();
+    //console.log(form.q1.value)
+
+    const userAnsers = [
+        form.q1.value,
+        form.q2.value,
+        form.q3.value,
+        form.q4.value,
+        form.q5.value,
+    ]
+    console.log(userAnsers)
+})
+
+if (userAnswers.includes('')) {
+    alert('解答していない問題があります。');
+    return;
+}
+
+//if (userAnsers.includes(``)) {
+//    alart(`回答していない問題があります`)
+//    return; //以降関数の処理をストップ
+//}
+
+
+userAnswers.forEach((answer, index) => {
+    console.log(answer);
+    if (answer === answers[index]) {
+        score += scorePoint;
+    }
+});
+console.log(score)

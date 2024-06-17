@@ -6,30 +6,41 @@
     padding: 0;
 }
 
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 body {
-    background: #f8f8f8;
+    /*background: #f8f8f8;*/
+    background-color: #f8f8f8;
 }
 
 .container {
     width: 680px;
-    background: #fff;
+    /*background: #fff;*/
+    background-color: #fff;
     margin: 40px auto;
     border-radius: 8px;
 }
 
 h1 {
-    font-size: 150%;
+    /* font-size: 150%;*/
+    font-size: 1.5em;
     padding: 1em;
     margin: 0;
 }
 
 nav {
-    background: #efefef;
+    /*background: #efefef;*/
+    background-color: #efefef;
 }
 
 
 .gnav-list {
     list-style-type: none;
+    /* list-style:none でも可　*/
     margin: 0;
     padding: 0;
     text-align: center;
@@ -38,7 +49,8 @@ nav {
 
 .gnav-list li {
     display: inline-block;
-    font-size: 80%;
+    /* font-size: 80%; */
+    font-size: 0.8em;
     margin: 0 0.5em;
 }
 
@@ -52,13 +64,15 @@ nav {
 
 
 .gnav-list li a:hover {
-    background: #ccc;
+    /*background: #ccc;*/
+    background-color: #ccc;
     color: #000;
 }
 
 
 .gnav-list li a::first-line {
     font-weight: bold;
+    /*font-weight: 700px; */
 }
 
 
@@ -72,9 +86,11 @@ main {
 
 }
 
+/*
 .about {
     display: flex;
 }
+*/
 
 .about img {
     width: 300px;

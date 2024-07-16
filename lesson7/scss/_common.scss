@@ -1,3 +1,6 @@
+@use'./mixins' as *;
+
+
 * {
     box-sizing: border-box;
 }
@@ -60,4 +63,13 @@ img {
 
 section {
     padding: 60px 0;
+}
+
+@include mq {
+    a[href^="tel:"] {
+        pointer-events: none;
+    }
+
+    //属性の値がtelで始まる
+
 }

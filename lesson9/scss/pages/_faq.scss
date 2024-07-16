@@ -1,0 +1,21 @@
+@use'./mixins' as *;
+
+.faq-section {
+    max-width: 800px;
+}
+
+.faq-section .faq-content {
+    margin-bottom: 60px;
+}
+
+h2,
+p {
+    margin-top: 1.2em;
+    display: flex;
+}
+
+h2::before,
+p::before {
+    margin-top: -0.2em;
+    font-size: ;
+}

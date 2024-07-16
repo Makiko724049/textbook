@@ -1,6 +1,7 @@
 :root {
   --main-color: #85a7cc;
   --main-color-dark: #527acc;
+  --main-color-xdark: #596680;
   --bg-gray: #f0f0f0;
 }
 
@@ -315,6 +316,14 @@ section {
   margin: 0 0 3px 10px;
   transform: rotate(-90deg);
 }
+
+.foot-area {
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+  background-color: var(--main-color-xdark);
+}
+
 
 .mv-area {
   width: 100vw;

@@ -4,77 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design Self-Study Guide</title>
-    <meta name="description" content="独学でWebデザイナーになるための学習ステップを詳しく解説したサイトです。">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#40c221">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>Go! CAMP</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <h1>
-                Web Design Self-Study Guide
-            </h1>
-        </header>
-        <nav>
-            <ul class="gnav-list">
-                <li><a href="#">HOME<br>ホーム</a></li>
-                <li><a href="#">GUIDE<br>ガイド</a></li>
-                <li><a href="#">BLOG<br>ブログ</a></li>
-                <li><a href="#">CONTACT<br>コンタクト</a></li>
+<body class="top">
+
+    <header class="header">
+        <a href="./" class="header-logo">
+            <img src="./img/logo.svg" alt="Go! CAMP" width="240">
+        </a>
+        <button class="header-button">
+            <span class="icon"></span>
+        </button>
+        <nav class="header-gnav">
+            <ul>
+                <li><a href="./index.html">トップページ</a></li>
+                <li><a href="#">Go! CAMPについて</a></li>
+                <li><a href="./news/index.html">NEWS</a></li>
+                <li><a href="./faq/index.html">よくある質問</a></li>
             </ul>
         </nav>
-        <main>
-            <div class="about clearfix">
-                <img src="img/photo.jpg" alt="">
-                <p>Webデザイナーになるための独学ガイドへようこそ。Webデザイナーになるための必須学習内容をステップバイステップで紹介しています。<br>
-                    Webデザイン業界の旬の情報はブログでチェックしてください!</p>
-            </div>
+    </header>
 
-            <section class="guide">
-                <h2>Guide</h2>
-                <section class="guide-list">
-                    <a href="#">
-                        <div class="guide-icon">
-
-                            <img src="img/icon_html.png" alt="">
-                        </div>
-                        <div class="guide-text">
-                            <h3>HTML</h3>
-                            <p>様々なHTMLタグや、よくある組み方を紹介しています。</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="guide-list">
-                    <a href="#">
-                        <div class="guide-icon">
-                            <img src="img/icon_css.png" alt="">
-                        </div>
-                        <div class="guide-text">
-                            <h3>CSS</h3>
-                            <p>基本的な使い方たら、少し凝った装飾方法についてまとめています。</p>
-                        </div>
-                    </a>
-                </section>
-                <section class="guide-list">
-                    <a href="#">
-                        <div class="guide-icon">
-                            <img src="img/icon_css.png" alt="">
-                        </div>
-                        <div class="guide-text">
-                            <h3>JavaScript</h3>
-                            <p>基礎構文からサイトでよく使うギミックをまとめています。</p>
-                        </div>
-                    </a>
-                </section>
-            </section>
-        </main>
-        <footer>
-            <small>&copy;Web Design Self-Study Guide All Rights Reserved</small>
-        </footer>
-
+    <div class="hero">
+        <h1>キャンプへ行こう！</h1>
+        <p>自然、山、空、緑。<br>
+            日帰りでも楽しいキャンプの魅力を紹介！</p>
     </div>
 
+    <div class="top-feature">
+        <div class="top-feature_box">
+            <h2>Go! CAMPについて</h2>
+            <p>Go! CAMPは、都心からおそよ2時間で行ける、アクセス抜群のキャンプ場です。デイキャンプからオートキャンプ、BBQなど全６種類のサイト・エリアをご用意しております。
+                <br>
+                静かな環境を楽しむ「静謐の森」サイト、ファミリーや仲間とわいわい楽しむBBQ場にも隣接したAC電源付きオートキャンプサイトなど、さまざまな目的にあわせた施設をお楽しみください。
+            </p>
+            <a href="#">続きを読む</a>
+        </div>
+        <img src="img/photo-img01.jpg" alt="" width="530">
+    </div>
+    <div class="top-feature">
+        <div class="top-feature_box">
+            <h2>過ごし方</h2>
+            <p>静かな環境を楽しむ「静謐の森」サイトでは、満天の星空や木々のせせらぎを満喫いただけます。AC電源付きオートキャンプサイトでは、大人数でのバーベキューに最適です。キャンピングカーでのお越しの方にも人気です。<br>
+                アクティビティ面では、釣り堀、川原での水遊び（夏季のみ）、四季を通じて楽しめるトレッキングコースなどさまざまな楽しみ方を提供しております。</p>
+            <a href="#">続きを読む</a>
+        </div>
+        <img src="img/photo-img02.jpg" alt="" width="530">
+    </div>
+
+    <section>
+        <h2 class="heading-title">News</h2>
+        <ul class="top-list">
+            <li>
+                <a href="./news/index.html">
+                    <img src="./img/photo-thumb01.jpg" alt="" width="120">
+                    <div class="top-list_info">
+                        <time datetime="2019-12-26">2019年12月26日</time>
+                        <p class="top-list_title">クリスマスイベントを開催しました</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./news/index.html">
+                    <img src="./img/photo-thumb02.jpg" alt="" width="120">
+                    <div class="top-list_info">
+                        <time datetime="2019-12-11">2019年12月11日</time>
+                        <p class="top-list_title">お正月イベントのお知らせ</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./news/index.html">
+                    <img src="./img/photo-thumb03.jpg" alt="" width="120">
+                    <div class="top-list_info">
+                        <time datetime="2019-12-1">2019年12月1日</time>
+                        <p class="top-list_title">クリスマスプレゼント抽選会のお知らせ</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./news/index.html">
+                    <img src="./img/photo-thumb04.jpg" alt="" width="120">
+                    <div class="top-list_info">
+                        <time datetime="2019-11-10">2019年11月10日</time>
+                        <p class="top-list_title">年末年始営業時間および休業のお知らせ</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <small>&copy; MdN Corporation.</small>
+    </footer>
 
 </body>
 
